@@ -59,6 +59,8 @@
 
     a { color: var(--gold-light); text-decoration: none; transition: 0.3s ease; }
     a:hover { color: var(--text); text-shadow: 0 0 8px rgba(167, 139, 250, 0.6); }
+    .em-hover { transition: 0.3s ease; }
+    .em-hover:hover { border-color: var(--emerald) !important; box-shadow: 0 0 20px rgba(16, 185, 129, 0.3) !important; transform: translateY(-3px); }
 
     /* Layout */
     .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
@@ -100,6 +102,15 @@
     }
     .pill.gold { border-color: var(--gold); background: rgba(167, 139, 250, 0.1); color: var(--gold); }
 
+    /* Buttons */
+    .btn-outline {
+      padding: 14px 28px; font-weight: 600; border: 1px solid var(--line); border-radius: 12px;
+      transition: 0.3s ease; color: var(--text); display: inline-block;
+    }
+    .btn-outline:hover {
+      border-color: var(--emerald); box-shadow: 0 0 15px rgba(16, 185, 129, 0.3); color: var(--text);
+    }
+
     /* Glass Cards */
     .glass-card {
       background: var(--surface-glass);
@@ -109,7 +120,7 @@
       box-shadow: 0 20px 40px rgba(0,0,0,0.4);
       transition: transform 0.3s ease, border-color 0.3s ease;
     }
-    .glass-card:hover { transform: translateY(-5px); border-color: rgba(167, 139, 250, 0.4); }
+    .glass-card:hover { transform: translateY(-5px); border-color: var(--emerald); box-shadow: 0 10px 40px rgba(16, 185, 129, 0.15); }
 
     /* Visual Element in Hero */
     .hero-visual { position: relative; }
@@ -119,6 +130,12 @@
       background: linear-gradient(135deg, rgba(147, 51, 234, 0.5), rgba(126, 34, 206, 0.3));
       box-shadow: 0 30px 60px rgba(0,0,0,0.6);
       position: relative; overflow: hidden;
+      transition: 0.4s ease;
+    }
+    .profile-frame:hover {
+      background: linear-gradient(135deg, var(--emerald), rgba(126, 34, 206, 0.6));
+      box-shadow: 0 30px 60px rgba(16, 185, 129, 0.3);
+      transform: translateY(-5px);
     }
     .profile-inner {
       width: 100%; height: 100%; border-radius: 20px; background: var(--surface);
@@ -213,7 +230,7 @@
           </p>
           <div class="pill-container" style="margin-top: 40px;">
             <a href="#about" style="background: var(--emerald); color: var(--text); padding: 14px 28px; border-radius: 12px; font-weight: 700; box-shadow: 0 6px 20px rgba(16, 185, 129, 0.3); text-shadow: none; display: inline-block;">Explore My Journey</a>
-            <a href="#business" style="padding: 14px 28px; font-weight: 600; border: 1px solid var(--line); border-radius: 12px;">Professional Impact</a>
+            <a href="#business" class="btn-outline">Professional Impact</a>
           </div>
         </div>
         <div class="hero-visual">
@@ -341,7 +358,7 @@
             </a>
           </div>
           <div style="text-align: right;">
-            <img src="Sameera-Tillman-216x300-1.jpeg" alt="Fayette County Development Authority Headshot" class="img-fluid" style="max-width: 80%;" />
+            <img src="Sameera-Tillman-216x300-1.jpeg" alt="Fayette County Development Authority Headshot" class="img-fluid em-hover" style="max-width: 80%; border: 1px solid transparent; border-radius: 16px;" />
           </div>
         </div>
       </div>
@@ -357,7 +374,7 @@
         <p style="font-size: 18px; color: var(--muted);">
           However, my greatest achievement and the absolute center of my world are my two sons. 
           <br/><br/>
-          <img src="490000142_10114699973926219_7883057244863835674_n.jpg" alt="Tillman Family" style="width: 100%; max-width: 600px; border-radius: 20px; border: 1px solid var(--line); margin-bottom: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" />
+          <img src="490000142_10114699973926219_7883057244863835674_n.jpg" alt="Tillman Family" class="em-hover" style="width: 100%; max-width: 600px; border-radius: 20px; border: 1px solid var(--line); margin-bottom: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" />
           <br/>
           Everything I build, from businesses to robust community infrastructures, I build with their future in mind.
         </p>
